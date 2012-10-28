@@ -10,8 +10,8 @@ class Chef
     # Approach ported from spatula (https://github.com/trotter/spatula)
     # Copyright 2009, Trotter Cashion
     class Cook < Knife
-      OMNIBUS_EMBEDDED_PATHS  = ["/opt/chef/embedded/bin", "/opt/opscode/embedded/bin"]
-      CHEF_VERSION_CONSTRAINT = ">=0.10.4"
+      OMNIBUS_EMBEDDED_PATHS  ||= ["/opt/chef/embedded/bin", "/opt/opscode/embedded/bin"]
+      CHEF_VERSION_CONSTRAINT ||= ">=0.10.4"
 
       include KnifeSolo::SshCommand
       include KnifeSolo::KitchenCommand
